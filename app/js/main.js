@@ -18,9 +18,12 @@ $(function() {
   initSlideshow();
   initMini();
   PopulateMini();
-  $("#photoNumber").html(app.listOfImage.length);
+  setPhotoNumber();
 });
 
+var setPhotoNumber = function(){
+  $("#photoNumber").html(app.listOfImage.length);
+}
 
 var initMini = function(){
   app.refreshMini = window.setInterval(function updateMini() {
@@ -45,19 +48,7 @@ var displayImage = function(src){
 var PopulateMini = function() {
   app.listOfMini = ShiftArray(app.listOfMini, 1);
   var index = 0;
-  $(".gallery").each(function(index, el) {
-    /*var img = $('<img>', {
-      src: "file://"+config.watch.path+"/"+ app.listOfMini[index]
-    });
-    var img2 = $('<img>', {
-      src: "file://"+config.watch.path+"/"+ app.listOfMini[index+1],
-      "class":"next"
-    });
-    $(el).html(img).prepend(img2);*/
-
-    //$(el).find('img.current').attr("src", "file://"+config.watch.path+"/"+ app.listOfMini[index]);
-
-    
+  $(".gallery").each(function(index, el) {  
     $(el).find('img.next').attr("src", "file://"+config.watch.path+"/"+ app.listOfMini[index]);
 
     $(el).find('img.next').delay(250*index/1.1).animate({top:"0px"}, 1000, function(){
@@ -70,8 +61,11 @@ var PopulateMini = function() {
 }
 
 var newPhoto = function(name){
+  setPhotoNumber();
   clearInterval(app.refreshSlideshow);
   $("#current > img").attr("src", "file://"+config.watch.path+"/"+name);
+  app.listOfImage.push(name);
+
   window.setTimeout(function runSlideshow(){
     clearInterval(app.refreshMini);
     initSlideshow();

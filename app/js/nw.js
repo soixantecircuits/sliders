@@ -1,12 +1,17 @@
 var isNode = typeof global !== "undefined" && {}.toString.call(global) == '[object global]';
 if (isNode) {
+    var previous = "";
     var watch = require('watch');
     watch.createMonitor(config.watch.path, function (monitor) {
       monitor.on("created", function (path, stat) {
         if (/^[^\.].*$/.test(path.split("/").pop())) {
           try {
             console.log(path);
-            displayImage(path);
+            //displayImage(path);
+            if(previous !=path.split("/").pop()){
+              newPhoto(path.split("/").pop());
+              previous = path.split("/").pop();
+            }
           }catch(err){
             console.log(err)
           }
