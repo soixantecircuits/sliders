@@ -12,6 +12,7 @@
   },
   "chromium-args": "--child-clean-exit",
   "dependencies": {
-      "watch":"*"
+      "watch":"*",
+      "node-dir":"*"
   }
 }
