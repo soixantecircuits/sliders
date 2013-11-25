@@ -60,7 +60,7 @@ var PopulateMini = function() {
     
     $(el).find('img.next').attr("src", "file://"+config.watch.path+"/"+ app.listOfMini[index]);
 
-    $(el).find('img.next').animate({top:"0px"}, 3000, function(){
+    $(el).find('img.next').delay(250*index/1.1).animate({top:"0px"}, 1000, function(){
       $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
       $(el).find('img.next').css({top:"-382px"});
     });
