@@ -90,3 +90,12 @@ aside{
   top: -382px;
   z-index: 2;
 }
+
+.next.next-1, .next.next-2{
+  top:0px;
+  left:-382px;
+}
+.next.next-4{
+  top:0px;
+  left:382px;
+}

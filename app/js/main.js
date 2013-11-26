@@ -51,11 +51,27 @@ var PopulateMini = function() {
   $(".gallery").each(function(index, el) {  
     $(el).find('img.next').attr("src", "file://"+config.watch.path+"/"+ app.listOfMini[index]);
 
-    $(el).find('img.next').delay(250*index/1.1).animate({top:"0px"}, 1000, function(){
-      $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
-      $(el).find('img.next').css({top:"-382px"});
-    });
-
+    if($(el).find('img.next').hasClass('next-1')){
+      $(el).find('img.next').delay(250*index/1.1).animate({left:"0px"}, 250, function(){
+        $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
+        $(el).find('img.next').css({left:"-382px"});
+      });
+    } else if($(el).find('img.next').hasClass('next-2')){
+      $(el).find('img.next').delay(250*index/1.1).animate({left:"0px"}, 250, function(){
+        $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
+        $(el).find('img.next').css({left:"-382px"});
+      });
+    } else if($(el).find('img.next').hasClass('next-4')){
+      $(el).find('img.next').delay(250*(index+2)/1.1).animate({left:"0px"}, 250, function(){
+        $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
+        $(el).find('img.next').css({left:"382px"});
+      });
+    } else {
+      $(el).find('img.next').delay(250*index/1.1).animate({top:"0px"}, 250, function(){
+        $(el).find('img.current').attr("src", $(el).find('img.next').attr("src"));
+        $(el).find('img.next').css({top:"-382px"});
+      });
+    }
     index++;
   });
 }
