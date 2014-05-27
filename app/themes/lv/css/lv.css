@@ -1,0 +1,165 @@
+*{
+  font-family: 'louis_vuittonlight'
+}
+
+body, html{
+  overflow: hidden;
+}
+
+h1{
+  font-size: 42px;
+  font-family: "louis_vuittonmedium";
+  letter-spacing: 2px;
+  position: absolute;
+  top: 60px;  
+  left: 0;
+  right: 0;
+}
+
+ul#start li:first-child{
+  margin-bottom: 13px;
+}
+
+ul#start li{
+  letter-spacing: 5px;
+}
+
+.pull-right-next{
+  right:43px;
+}
+
+.logo-place{
+  background-image: url(../img/logo.png);
+  width: 58%;
+}
+
+.left-label{
+  float: left;
+  margin-right: 50px;
+  width: 153px;
+  text-align: right;
+}
+
+.left-label .en{
+  color:#644f44;
+  font-size:22px;
+  font-family: "louis_vuittonregular";
+}
+
+input[type="text"],input[type="email"]{
+  width: 414px;
+  height: 45px;
+  background: white;
+  border: none;
+  margin-bottom: 30px;
+  font-size: 30px;
+  float: left;
+  margin-top: 17px;
+  color:#000;
+}
+
+.control-group{
+  overflow: auto;
+  clear: both;
+}
+.ru.control-label {
+  font-size: 35px;
+  font-family: "louis_vuittonregular";
+}
+
+#singlebutton {
+  float: right;
+  border-radius: 0px;
+  background-color: #443333;
+  font-family: 'louis_vuittonlight';
+}
+
+#main form { 
+  width: 1080px;
+}
+
+#main form .main-infos {
+  width: 621px;
+  margin: 0 auto;
+}
+
+.window-infos{
+  border-top: 10px solid #493d3e;
+  background-color: #302223;
+  color: #f0ece9;
+  margin: 0px auto;
+  padding: 10px 20px 10px 20px;
+  text-align: left;
+  width: 960px;
+  line-height: 16px;
+}
+
+.window-infos p{
+  font-size: 16px;
+}
+
+.window-infos p.en{
+  font-size: 12px;
+}
+
+.window-infos .left-label{
+  width:558px;
+  margin-right: 350px;
+}
+
+#right-check{
+  float: right;
+  width: 755px;
+  text-align: left;
+  margin-right: 0;
+}
+
+.right-label {
+  float: right;
+  width: 597px;
+  text-align: right;
+}
+
+.condition{
+  margin: 10px 0px;
+}
+
+input[type=checkbox] {  
+    display: none;  
+}
+
+.condition label:before {  
+    border-radius: 3px;  
+} 
+
+input[type=checkbox]:checked + label:before {  
+    content: "\2713";  
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
+    font-size: 15px;  
+    color: #f3f3f3;  
+    text-align: center;  
+    line-height: 15px;  
+}  
+
+.thanks-message {
+  width: 1040px;
+  margin: 0 auto;
+  background: #302223;
+  border-top: 10px solid #493d3e;
+}
+
+.thanks-message .separator hr{
+  border-top: 3px solid #493d3e;
+}
+
+.thanks-message h1{
+  font-size:42px;
+}
+
+.thanks-message h1.en, .thanks-message p{
+  font-size:30px;
+}
+
+.thanks-message p.en{
+  font-size: 22px;
+}
